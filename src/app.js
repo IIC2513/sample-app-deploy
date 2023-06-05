@@ -28,7 +28,7 @@ router.get("/", (ctx, next) => {
  * @param {KoaContext} ctx - Koa context object
  * @param {KoaNext} next - Koa next middleware function
  */
-router.get("/heartbeat", (ctx, next) => {
+router.get("/healthcheck", (ctx, next) => {
   ctx.response.body = { message: "true" };
   ctx.status = 200;
 });
