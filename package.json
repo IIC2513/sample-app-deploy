@@ -9,7 +9,6 @@
     "start": "node src/app.js",
     "dev": "nodemon src/app.js",
     "deploy": "node start.js",
-    "db:deploy": "run-s db:migrate db:seed",
     "db:migrate": "sequelize db:migrate",
     "db:seed":  "sequelize db:seed:all",
     "db:drop": "sequelize db:drop",
