@@ -10,12 +10,13 @@
     "dev": "nodemon src/app.js",
     "deploy": "node start.js",
     "db:migrate": "sequelize db:migrate",
-    "db:seed":  "sequelize db:seed:all",
+    "db:seed": "sequelize db:seed:all",
     "db:drop": "sequelize db:drop",
     "db:create": "sequelize db:create",
     "db:reset": "run-s db:drop db:create"
   },
   "dependencies": {
+    "@koa/cors": "^4.0.0",
     "@koa/router": "^12.0.0",
     "dotenv": "^16.1.4",
     "koa": "^2.14.2",

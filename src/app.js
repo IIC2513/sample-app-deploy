@@ -10,6 +10,7 @@ const Koa = require("koa");
 const { default: koaBody } = require("koa-body");
 const KoaLogger = require("koa-logger");
 const db = require("./models");
+const cors = require("@koa/cors");
 
 const app = new Koa();
 
@@ -49,6 +50,7 @@ router.get("/books", async (ctx, next) => {
 });
 
 app.use(KoaLogger());
+app.use(cors({ origin: "*" }));
 app.use(koaBody());
 
 app.use(router.routes()).use(router.allowedMethods());
